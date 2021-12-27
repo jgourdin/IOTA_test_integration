@@ -108,12 +108,14 @@ const DropInfoTarget = ({ targetKey, defaultvalue, label, setValue, ckey }) => {
 };
 
 DropInfoTarget.propTypes = {
+  ckey: PropTypes.string,
   targetKey: PropTypes.string,
   defaultvalue: PropTypes.string,
   label: PropTypes.string,
 };
 
 DropInfoTarget.defaultProps = {
+  ckey: 'DropInfoTarget',
   targetKey: 'information',
   defaultvalue: 'defaultvalue',
   label: null

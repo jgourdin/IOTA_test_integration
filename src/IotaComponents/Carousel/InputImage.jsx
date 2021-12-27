@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import ImageItem from './ImageItem';
-import InputTextWithBorders from '../Atoms/InputTextWithBorders';
+import React from "react";
+import PropTypes from "prop-types";
+import ImageItem from "./ImageItem";
+import InputTextWithBorders from "../Atoms/InputTextWithBorders";
 
 const InputImage = ({
   ckey,
@@ -13,12 +13,19 @@ const InputImage = ({
   canDl,
   /** input */
   onChange,
-  inputs
+  inputs,
 }) => {
-
   return (
-    <div key={`InputImage_${ckey}`} className="col-flex-between"
-      style={{ height: '100%' }}
+    <div
+      key={`InputImage_${ckey}`}
+      style={{
+        height: "100%",
+        width: "300px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "end",
+        alignItems: "center",
+      }}
     >
       <ImageItem
         source={source}
@@ -28,15 +35,16 @@ const InputImage = ({
         canDl={canDl}
       />
       <div className="my-3">
-        {inputs?.map((input, index) => <InputTextWithBorders
-          key={`InputImagecall_${ckey}_${input.key}_${index}`}
-          ckey={`InputImage_${ckey}_${input.key}_${index}`}
-          value={input.value}
-          name={input.key}
-          placeholder={input.placeholder}
-          onChange={(value) => onChange(value)}
-        />
-        )}
+        {inputs?.map((input, index) => (
+          <InputTextWithBorders
+            key={`InputImagecall_${ckey}_${input.key}_${index}`}
+            ckey={`InputImage_${ckey}_${input.key}_${index}`}
+            value={input.value}
+            name={input.key}
+            placeholder={input.placeHolder}
+            onChange={(value) => onChange(value)}
+          />
+        ))}
       </div>
     </div>
   );
@@ -51,11 +59,13 @@ InputImage.propTypes = {
 };
 
 InputImage.defaultProps = {
-  ckey: 'InputImage',
-  source: '',
-  alt: '',
+  ckey: "InputImage",
+  source: "",
+  alt: "",
   selected: false,
-  onSelect: () => { console.log("Try to select") }
+  onSelect: () => {
+    console.log("Try to select");
+  },
 };
 
 export default InputImage;

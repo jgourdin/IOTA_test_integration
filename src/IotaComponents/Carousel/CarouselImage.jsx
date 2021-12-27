@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import Carousel from './Carousel';
-import SelectableImage from './SelectableImage';
-import ImageItem from './ImageItem';
-import { onDownload } from 'IotaComponents/Activities/Carousel/check-images';
-
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import Carousel from "./Carousel";
+import SelectableImage from "./SelectableImage";
+import ImageItem from "./ImageItem";
+import { onDownload } from "./check-images";
 
 const CarouselImage = ({
   ckey,
@@ -12,7 +11,6 @@ const CarouselImage = ({
   setImageArray, //setDataToUse
   imageArray, //dataToUse
 }) => {
-
   const [imageDisplayed, setImageDisplayed] = useState([]);
 
   useEffect(() => {
@@ -24,10 +22,11 @@ const CarouselImage = ({
     // creation du contenu des elements selectionnables du carousel
     // a partir de l'objet itemArray
     if (
-      (!imageArray || (typeof imageArray === "object" && imageArray?.length === 0)) &&
+      (!imageArray ||
+        (typeof imageArray === "object" && imageArray?.length === 0)) &&
       typeof content.itemArray === "object"
     ) {
-      const tempArray = content.itemArray.map(elem => {
+      const tempArray = content.itemArray.map((elem) => {
         // si pas de progress
         elem.isSet = false;
         elem.isDl = false;
@@ -35,16 +34,18 @@ const CarouselImage = ({
       });
       setImageDisplayed(tempArray);
     }
-  }
+  };
 
   useEffect(() => {
     if (typeof imageArray === "object" && imageArray?.length > 0) {
       setImageDisplayed(imageArray);
-    } 
+    }
   }, [imageArray]);
 
   const onSelect = (id) => {
-    const copy = [...typeof imageDisplayed === 'object' ? imageDisplayed : []];
+    const copy = [
+      ...(typeof imageDisplayed === "object" ? imageDisplayed : []),
+    ];
     const tempItem = copy.map((item) => {
       if (item.id === id) {
         item.isSet = !item.isSet;
@@ -57,9 +58,9 @@ const CarouselImage = ({
     });
     setImageArray({
       images: tempItem,
-      setNext: content?.check(tempItem, content?.nbToSelect)
+      setNext: content?.check(tempItem, content?.nbToSelect),
     });
-  }
+  };
 
   return (
     <div key={`CarouselImage_${ckey}`} className="row-flex-centered">
@@ -72,7 +73,9 @@ const CarouselImage = ({
         displayOnlySelected={content?.displayOnlySelected}
         multiSelect={content?.multiselect}
         onSelect={(id) => onSelect(id)}
-        onDownload={(id) => onDownload(imageArray, content?.check, setImageArray, id)}
+        onDownload={(id) =>
+          onDownload(imageArray, content?.check, setImageArray, id)
+        }
         ComponentToDisplay={content?.selectable ? SelectableImage : ImageItem}
       />
     </div>
@@ -88,7 +91,7 @@ CarouselImage.propTypes = {
 };
 
 CarouselImage.defaultProps = {
-  ckey: 'CarouselImage',
+  ckey: "CarouselImage",
   content: {
     itemNb: 3,
     itemArray: [],

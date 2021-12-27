@@ -3,12 +3,12 @@
 */
 /* LOADING */
 .loading-iota-absolute {
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	z-index: 150;
-	top: 0;
-	left: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 150;
+  top: 0;
+  left: 0;
 }
 .loading-iota {
   @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -218,6 +218,36 @@
   cursor: pointer;
 }
 
+.basic-container {
+  background: white;
+  border-radius: 20px;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  border: 5px solid var(--iota-middle-orange-color);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item-container {
+  height: 100%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 /* CARD BODY */
 .description-card {
   position: absolute;
@@ -261,6 +291,15 @@
 #carousel-arrows img {
   width: 45px;
 }
+
+#carousel-arrows {
+  width:50px;
+   height:100%;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+}
 .carousel-image {
   /* margin: -5% 0% -5% -5%; */
   /* width: 100%; */
@@ -271,10 +310,10 @@
   border: 2px solid var(--iota-grey-blue-color);
 }
 .carousel-image-frame {
-  max-height: 350px;
+  /* max-height: 350px; */
   /* overflow: hidden; */
-  margin: auto 15px;
-  border-radius: 15px;
+  /* margin: auto 15px;
+  border-radius: 15px; */
 }
 .category-selected {
   width: 65px;
@@ -288,10 +327,13 @@
   background-color: var(--iota-main-orange-color);
   border-radius: 15px;
 }
-.drag-drop-container{
-    background-color: var(--iota-light-orange-color);
-    border-radius: 50px;
-    padding: 20px;
+.drag-drop-container {
+  background-color: var(--iota-light-orange-color);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px var(--iota-main-orange-color);
+  padding: 20px;
 }
 .button-download {
   border: 2px dotted var(--iota-grey-blue-color);

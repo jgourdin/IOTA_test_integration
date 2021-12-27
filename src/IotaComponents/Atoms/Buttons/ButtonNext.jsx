@@ -13,8 +13,9 @@ const ButtonNext = ({ onValidate, text, disabled, timeout }) => {
       }}
     >
       <span className="arrow-next is-bold is-size-5">
-        {text}{' '}
+        {text}
         <i className="m-0 ml-3 my-auto fa fa-angle-right" aria-hidden="true" />
+        {'>'}
       </span>
     </button>
   );

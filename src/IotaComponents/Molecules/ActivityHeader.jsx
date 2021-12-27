@@ -24,7 +24,7 @@ const ActivityHeader = ({
               alt="Illustration de l'activité"
             />
           </div>
-          <div className="my-2">
+          <div className="my-2"> 
             <LevelStars total={3} selected={level} />
           </div>
         </div>

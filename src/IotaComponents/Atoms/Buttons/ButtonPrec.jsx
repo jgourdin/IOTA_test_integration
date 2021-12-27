@@ -11,8 +11,9 @@ const ButtonPrec = ({ onValidate, text, disabled, timeout }) => {
         return onValidate(rep);
       }}
     >
-      <span className="arrow-prec">
-        <i className="m-0 mr-4 my-auto fa fa-angle-left" aria-hidden="true" />
+      <span className="arrow-prec is-bold is-size-5">
+        {'<'}
+        <i className="m-0 mr-3 my-auto fa fa-angle-left" aria-hidden="true" />
         {text}
       </span>
     </button>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import Avatar from '../Atoms/Avatar';
+import React from "react";
+import { PropTypes } from "prop-types";
+import Avatar from "../Atoms/Avatar";
 
 const NavBarStudentProfil = () => {
   return (
@@ -12,7 +12,7 @@ const NavBarStudentProfil = () => {
       >
         <div className="navbar-profile-info my-auto pr-4 text-center">
           <span className="is-size-6 text-white is-light" alt="identifiant">
-            {'Padawan'}
+            {"Padawan"}
           </span>
         </div>
         <Avatar />
@@ -35,14 +35,14 @@ NavBarStudentProfil.propTypes = {
 
 NavBarStudentProfil.defaultProps = {
   user: {
-    FirstName: 'Soki',
-    LastName: 'IOTA',
+    FirstName: "Soki",
+    LastName: "IOTA",
     // points: 350,
     Passport: 0,
     Avatar: {},
     ActivityPoint: 42,
   },
-  disconnect: () => console.error('Try to Disconnected'),
+  disconnect: () => console.error("Try to Disconnected"),
 };
 
 export default NavBarStudentProfil;
