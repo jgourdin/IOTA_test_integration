@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
+
+/* global css */
+:focus {
+  outline: none !important;
+}
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: var(--iota-grey-blue-color) !important;
+  text-decoration: none !important;
+}
+a:hover {
+  color: var(--iota-grey-blue-color) !important;
+  font-weight: bolder !important;
+}
+.no-button {
+  background-color: transparent;
+  border: 0;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+:root {
+  --iota-dark-orange-color: #de675e;
+  --iota-middle-orange-color: #e3896b;
+  --iota-main-orange-color: #f2a58a;
+  --iota-light-orange-color: #FFD9CC;
+  --iota-bright-orange-color: #EA856E;
+
+  --iota-dark-green-color: #1f4852;
+  --iota-middle-green-color: #4e9d85;
+  --iota-main-green-color: #60ccae;
+
+  --iota-dark-yellow-color: #f2b95a;
+  --iota-middle-yellow-color: #f4cc5f;
+  --iota-main-yellow-color: #fae287;
+
+  --iota-dark-purple-color: #1F0E45;
+  --iota-dark-blue-color: #1b2b4a;
+  --iota-middle-blue-color: #1a4181;
+  --iota-main-blue-color: #235296;
+  --iota-bright-blue-color: #0941DE;
+  --iota-realylittle-green-color: #60ccae70;
+  --iota-realylittle-orange-color: #fcf4f3;
+  --iota-grey-blue-color: #5a6a95;
+  --iota-teacher-theme-bg: #f7f7f7;
+  --iota-grey: #eaecf6;
+  --iota-light-grey: #e3e0e0;
+  --iota-main-grey: #9f9f9f;
+  --iota-dark-grey: #687087;
+  --iota-light-grey-blue-color: #c6cfe6;
+	
+  --defined-font-size: 18px;
+  --navbar-height: 78px;
+  --background-img-path: url(IotaComponents/assets/Background/background.jpg);
+  /* --background-intro-img-path: url(IotaComponents/assets/Background/background-intro.png); */
+  /* --background-avatar-img-path: url(IotaComponents/assets/Background/background-avatar.png); */
+  font-family: 'Nunito', Open Sans, sans-serif;
+  font-size: var(--defined-font-size);
+  color: var(--iota-grey-blue-color) !important;
+}
+/* @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+} */
+body {
+  background-color: var(--iota-main-orange-color) !important;
+  color: var(--iota-grey-blue-color) !important;
+  height: 100%;
+  min-width: 720px;
+  min-height: 540px;
+  margin: 0;
+  font-family: 'Nunito', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.is-light {
+  font-weight: normal !important;
+}
+.is-bold {
+  font-weight: bold !important;
+}
+.is-italic {
+  font-style: italic !important;
+}
+
+.is-size-0 {
+  font-size: 50px !important;
+}
+.is-size-1 {
+  font-size: 40px !important;
+}
+.is-size-2 {
+  font-size: 30px !important;
+}
+.is-size-3 {
+  font-size: 27px;
+}
+.is-size-4 {
+  font-size: 25px;
+}
+.is-size-5 {
+  font-size: 1.11rem;
+}
+.is-size-6 {
+  font-size: 1rem;
+}
+.is-size-7 {
+  font-size: 0.85rem;
+}
+.text-orange {
+  color: var(--iota-main-orange-color);
+}
+.text-blue {
+  color: var(--iota-main-blue-color);
+}
+.text-basic {
+  color: var(--iota-grey-blue-color);
+}
+.text-green {
+  color: var(--iota-main-green-color);
+}
+.text-red {
+  color: var(--iota-dark-orange-color);
+}
+.text-grey {
+  color: var(--iota-dark-grey);
+}
+
+.background-light-orange {
+  background-color: var(--iota-realylittle-orange-color) !important;
+}
+.light-corned-border {
+	border-radius: 12px;
+}
+
+hr {
+  color: var(--iota-main-orange-color) !important;
+  width: 4rem;
+  border-radius: 5rem;
+  margin-top: 0rem !important;
+  margin-top: 0.4rem !important;
+  margin-bottom: 1rem !important;
+  height: 5px !important;
+  background-color: var(--iota-main-orange-color) !important;
+}
+
+.input-text {
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid var(--iota-dark-grey);
+  width: 400px;
+}
+.input-text-area {
+  width: 80%;
+  height: 180px;
+  border: none;
+  box-shadow: 0 0px 5px rgb(50 50 93 / 20%), 0 5px 15px rgb(0 0 0 / 17%);
+  border-radius: 15px;
+}
+
+.disabled-link {
+  pointer-events: none;
+  color: var(--iota-light-grey) !important;
+}
+
+#GnericListStyle {
+  list-style: none !important;
+}
+/* fix react strap dropdown list style */
+.dropdown {
+  list-style: none !important;
+}
+
+.background-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.flat-shadow {
+  box-shadow: 0px 0px 0px 5px rgb(0 0 0 / 2%), 3px 2px 2px 2px rgb(0 0 0 / 6%),
+    5px 5px 0px 5px rgb(0 0 0 / 3%);
+}
+
+.half-visible {
+  opacity: 0.6;
+}
+
+.hidden {
+	pointer-events:none;
+  display: none;
+  opacity: 0;
+}

@@ -1,0 +1,139 @@
+/* student */
+#StudentLayout {
+  background-image: var(--background-img-path) !important;
+  width: 100%;
+  /* height: calc(100vh - var(--navbar-height)); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+/* layout */
+.layout-main-content {
+  /* height: calc(100vh - var(--navbar-height) - 20px); */
+  width: 100%;
+  height: inherit;
+  margin: auto;
+  padding: 0;
+  /* overflow: auto; */
+  overflow: auto;
+  margin-bottom: 0;
+}
+/* top navbar */
+#customNavBar {
+  background-color: var(--iota-main-orange-color) !important;
+  justify-content: flex-start;
+  height: var(--navbar-height);
+  margin-left: 0;
+  z-index: 100;
+  width: 100%;
+  position: relative;
+  /* overflow-y: hidden; */
+  white-space: nowrap;
+}
+/* NAVBAR PROFILE */
+.navbar-profile-click {
+  display: inline-flex;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.navbar-profile-info {
+  width: fit-content;
+  white-space: nowrap;
+}
+.navbar-profile-autonomy {
+  position: relative;
+  right: 15px;
+  width: 33px;
+}
+.navbar-profile-points {
+  background-color: var(--iota-main-blue-color);
+  border-radius: 25px;
+  padding: 0 10px;
+}
+/* sidebar */
+.sidebar-container {
+  background-color: white;
+  z-index: 99;
+  height: 100%;
+  /* height: calc(100% + var(--navbar-height)); */
+  position: relative;
+  top: 0;
+  /* top: calc(-1 * var(--navbar-height)); */
+}
+.sidebar-burger-position {
+  position: absolute;
+  left: 13px;
+  bottom: 10px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  height: 55px;
+  width: 55px;
+}
+.sidebar-burger {
+  font-size: 25px;
+  cursor: pointer !important;
+}
+.sidebar-corner {
+  height: var(--navbar-height) !important;
+}
+.sidenav-routes {
+  margin-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-size: 1.4em;
+}
+.student-layout-self-notif-position {
+  position: relative;
+  right: -20px;
+}
+.student-layout-tablet-header {
+  width: 30vw;
+  min-width: 230px;
+  height: 100vh;
+  background-color: var(--iota-realylittle-orange-color);
+}
+.student-layout-tablet-header-position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 139;
+}
+.student-layout-tablet-account-header {
+  width: 20vw;
+  min-width: 400px;
+  height: 102vh;
+  background-color: var(--iota-realylittle-orange-color);
+  overflow: hidden;
+}
+.student-layout-tablet-account-header-position {
+  position: fixed;
+  top: -10px;
+  right: -10px;
+  z-index: 139;
+}
+.student-layout-tablet-account-header-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+.header-account-activity {
+  min-height: 110px;
+  min-width: 110px;
+  width: 45%;
+  border-radius: 20px;
+  border: 2px solid var(--iota-dark-orange-color);
+  background: white;
+}
+.header-account-experience {
+  min-height: 110px;
+  min-width: 110px;
+  width: 45%;
+  border-radius: 20px;
+  border: 2px solid var(--iota-middle-green-color);
+  background: white;
+}

@@ -1,0 +1,160 @@
+/*  
+* BASIC POSITION OR PROPORTION VALUES
+*/
+.fantomatic {
+	opacity: 0.5;
+}
+.black-and-white {
+	filter: grayscale(1);
+}
+/* BASIC POSITION */
+/* activity window */
+.activity-window-position {
+	min-width: 400px;
+	width: 95%;
+	position: relative;
+	margin: 2% auto;
+}
+/*hard center*/
+.content-hard-centered {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.correction-window-position {
+  min-width: 800px;
+  height: 100%;
+  width: 95%;
+}
+.row-flex-centered {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.row-flex-between {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.row-flex-spaced {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.row-flex-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.row-flex-evenly {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.row-flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.row-flex-end {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.col-flex-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col-flex-spaced {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.col-flex-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.col-flex-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.col-flex-evenly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.col-flex-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.window-max-size {
+  width: 100%;
+  height: 100%;
+  padding: 0em;
+  padding-left: 54px;
+  padding-right: 54px;
+	position: relative;
+	/* top: 78px; */
+}
+/* BASIC MODAL CONTENT PROPORTION */
+.lazy-next-button {
+	bottom: 30px;
+	right: 70px;
+	position: absolute;
+}
+.basic-content-size {
+	width: 520px;
+	min-height: 350px;
+}
+.basic-modal-body { 
+	/*is the modal fixed size 
+	* replaced fat-modal-sized for good
+	* it is not flex tho
+	*/
+	width: 520px;
+	height: 450px;
+}
+.centered-button {
+	width: 220px;
+	margin: 0 auto;
+}
+.hold-text-size-modal {
+	height: 180px;
+	width: 450px;
+}
+.basic-activity-shape-window {
+	width: 95%;
+	margin: 0px auto 0 auto;
+	overflow-y: auto;
+	height: 95%;
+}
+.anti-padding {
+	margin: -1rem !important;
+}
+@media (min-width: 1200px) {
+  .activity-window-position {
+    /* height: 100%; */
+  }
+	.correction-window-position {
+    height: 100%;
+  }
+}
+/* @media (max-width: 720px) { */
+@media (max-width: 900px) {
+	.col-flex-centered {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}
+@media (max-height: 800px) {
+	.col-flex-centered {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}
