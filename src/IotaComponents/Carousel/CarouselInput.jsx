@@ -81,7 +81,7 @@ const CarouselInput = ({ ckey, content, savedData, setDataToUse }) => {
       <div className="row-flex-centered">
         <Carousel
           itemNb={content?.itemNb}
-          itemArray={savedData || imageDisplayed}
+          itemArray={imageDisplayed}
           download={content?.download}
           displayOnlySelected={content?.displayOnlySelected}
           ComponentToDisplay={InputImage}

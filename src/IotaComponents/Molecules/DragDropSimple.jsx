@@ -97,14 +97,13 @@ const DropInfoTarget = ({ targetKey, defaultvalue, label, setValue, ckey }) => {
   }, [defaultvalue])
 
   useEffect(() => {
-    console.log(targetKey);
     setWaitToDisplay(true);
   }, [targetKey])
 
   useEffect(() => {
     setWaitToDisplay(false);
   }, [waitToDisplay === true])
-  
+
   return (
     <div key={ckey} >
       {

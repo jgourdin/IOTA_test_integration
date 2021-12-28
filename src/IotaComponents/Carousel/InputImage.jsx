@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import PropTypes from "prop-types";
 import ImageItem from "./ImageItem";
 import InputTextWithBorders from "../Atoms/InputTextWithBorders";
@@ -15,6 +15,8 @@ const InputImage = ({
   onChange,
   inputs,
 }) => {
+
+
   return (
     <div
       key={`InputImage_${ckey}`}
