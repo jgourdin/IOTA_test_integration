@@ -39,6 +39,7 @@ const CarouselInput = ({ ckey, content, savedData, setDataToUse }) => {
     }
     else if(!savedData[0].hasOwnProperty('inputs'))
     {
+      // si saveData n'a pas de champs inputs. 
       savedData.map((elem) => {
         elem.inputs = [
           ...content?.fields.map((field) => {

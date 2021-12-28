@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+// composant pour les cartes informatives des activités
+
 const LabelImage = ({ ckey, content }) => {
   return (
     <div className="basic-container" key={ckey}>

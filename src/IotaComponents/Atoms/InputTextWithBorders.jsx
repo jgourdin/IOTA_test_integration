@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 const InputTextWithBorders = ({ ckey, value, name, placeholder, onChange }) => {
 
+// OnChange va remonter le caractère input et l'id de l'item concerné.
+
   return (
     <div className="row-flex-centered text-center">
       <input
@@ -31,7 +33,7 @@ InputTextWithBorders.defaultProps = {
   name: "",
   placeholder: "",
   onChange: () => {
-    console.log("Try to select");
+    console.log("Try to input text");
   },
 };
 
