@@ -52,11 +52,6 @@ const CarouselInput = ({ ckey, content, savedData, setDataToUse }) => {
   };
 
   useEffect(() => {
-    console.log("SAVED DATA")
-    console.log(savedData);
-  }, [savedData]);
-
-  useEffect(() => {
     if (typeof savedData === "object" && savedData?.length > 0) {
       setImageDisplayed(savedData);
     } else {
@@ -78,7 +73,6 @@ const CarouselInput = ({ ckey, content, savedData, setDataToUse }) => {
             }
             return inp;
           });
-          console.log(elem.inputs);
         }
         return elem;
       });
