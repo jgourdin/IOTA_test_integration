@@ -26,7 +26,7 @@ const ButtonBottomLine = ({
           className={`mx-2 ${disableNext ? 'black-and-white fantomatic' : ''}`}
         >
           <ButtonNext
-            disabled={disableNext}
+            disabled={disableNext || thisIsTheEnd}
             onValidate={onNext}
             text={nextText ? nextText : thisIsTheEnd ?  "J'ai fini !" : 'Suivant'}
           />
