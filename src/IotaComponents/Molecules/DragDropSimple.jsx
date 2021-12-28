@@ -84,6 +84,7 @@ DragSingleElem.defaultProps = {
 
 const DropInfoTarget = ({ targetKey, defaultvalue, label, setValue, ckey }) => {
   const [content, setContent] = useState(defaultvalue);
+  const [waitToDisplay, setWaitToDisplay] = useState(false);
 
   const onHitArticle = (e) => {
     console.log("ON HIT ARTICLE", e)
@@ -95,14 +96,27 @@ const DropInfoTarget = ({ targetKey, defaultvalue, label, setValue, ckey }) => {
     setContent(defaultvalue);
   }, [defaultvalue])
 
+  useEffect(() => {
+    console.log(targetKey);
+    setWaitToDisplay(true);
+  }, [targetKey])
+
+  useEffect(() => {
+    setWaitToDisplay(false);
+  }, [waitToDisplay === true])
+  
   return (
-    <div key={ckey}>
+    <div key={ckey} >
+      {
+        !waitToDisplay ?
       <DropTarget targetKey={targetKey} onHit={(e) => onHitArticle(e)}>
         {label ? <span className="is-size-3 is-bold mt-2">{label}</span> : null}
         <div className="drop-container-data">
           <span className="is-size-5">{content}</span>
         </div>
       </DropTarget>
+      : null
+}
     </div>
   );
 };
@@ -118,7 +132,7 @@ DropInfoTarget.defaultProps = {
   ckey: 'DropInfoTarget',
   targetKey: 'information',
   defaultvalue: 'defaultvalue',
-  label: null
+  label: ""
 };
 
 export { DragableDatas, DragSingleElem, DropInfoTarget };

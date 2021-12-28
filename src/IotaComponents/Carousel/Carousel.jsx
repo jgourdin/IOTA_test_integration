@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 import useWindowSize from "../../Hooks/useWindowSize";
 import ButtonArrow from "../Atoms/Buttons/ButtonArrow";
 import StepperDots from "../Atoms/StepperDots";
-// import { onDownload } from './check-images';
+import { onDownload } from './check-images';
 
 const Carousel = ({
   itemNb,
@@ -44,7 +44,8 @@ const Carousel = ({
   }, [size.width]);
 
   const handlePrevStep = () => {
-    if (carouselStep > 0) setCarouselStep(carouselStep - 1);
+    if (carouselStep > 0) 
+      setCarouselStep(carouselStep - 1);
   };
 
   const handleNextStep = () => {
@@ -86,7 +87,7 @@ const Carousel = ({
                     selected={item.isSet}
                     inputs={item.inputs}
                     download={download}
-                    label={label ? item.title : ""}
+                    label={label ? item.targetDropped?.title : ""}
                     multiSelect={multiSelect}
                     onDownload={() => onDownload(item.id)}
                     /** drang and drop carousel */
@@ -99,7 +100,7 @@ const Carousel = ({
                     onChange={(value) => onChange({ ...value, item: item.id })}
                   />
                 </div>
-              </div>
+               </div>
             );
           }
           return null;
