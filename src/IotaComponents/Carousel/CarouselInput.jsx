@@ -37,7 +37,24 @@ const CarouselInput = ({ ckey, content, savedData, setDataToUse }) => {
       ];
       setImageDisplayed(tempArray);
     }
+    else if(!savedData[0].hasOwnProperty('inputs'))
+    {
+      savedData.map((elem) => {
+        elem.inputs = [
+          ...content?.fields.map((field) => {
+            field.value = "";
+            return { ...field };
+          }),
+        ]
+        return { ...elem};
+      })
+    }
   };
+
+  useEffect(() => {
+    console.log("SAVED DATA")
+    console.log(savedData);
+  }, [savedData]);
 
   useEffect(() => {
     if (typeof savedData === "object" && savedData?.length > 0) {
@@ -81,7 +98,7 @@ const CarouselInput = ({ ckey, content, savedData, setDataToUse }) => {
       <div className="row-flex-centered">
         <Carousel
           itemNb={content?.itemNb}
-          itemArray={imageDisplayed}
+          itemArray={savedData || imageDisplayed}
           download={content?.download}
           displayOnlySelected={content?.displayOnlySelected}
           ComponentToDisplay={InputImage}
