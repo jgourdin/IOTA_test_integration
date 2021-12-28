@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import Label from "../Atoms/LabelImage";
 
 const DragableDatas = ({ targetKey, datas }) => {
   return (
@@ -109,7 +110,7 @@ const DropInfoTarget = ({ targetKey, defaultvalue, label, setValue, ckey }) => {
       {
         !waitToDisplay ?
       <DropTarget targetKey={targetKey} onHit={(e) => onHitArticle(e)}>
-        {label ? <span className="is-size-3 is-bold mt-2">{label}</span> : null}
+        {label ? <Label content={label} ckey={`Label_${ckey}`} /> : null}
         <div className="drop-container-data">
           <span className="is-size-5">{content}</span>
         </div>

@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import ImageItem from "./ImageItem";
 import { DropInfoTarget } from "../Molecules/DragDropSimple";
-import Label from "../Atoms/LabelImage";
 
 const DragAndDropItem = ({
   ckey,
@@ -31,12 +30,12 @@ const DragAndDropItem = ({
         className="col-flex-centered"
         style={{ gap: "20px", marginTop: "10px" }}
       >
-        {label ? <Label content={label} ckey={`Label_${ckey}`} /> : null}
         {targetKeys?.map((target, index) => (
           <DropInfoTarget
             ckey={`${ckey}_${index}`}
             key={`${ckey}_${index}`}
             targetKey={target.key}
+            label={label}
             defaultvalue={
               targetDropped && targetDropped[target.key]
                 ? targetDropped[target.key]
